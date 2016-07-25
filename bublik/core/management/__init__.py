@@ -82,10 +82,7 @@ def execute_from_command_line(loop, argv):
     """
     A simple method that runs a ManagementUtility.
     """
-    from bublik.conf import settings
-    from bublik.apps import apps_settings
-
-    logging.config.dictConfig(settings.LOGGING)
+    from site_settings import settings, apps_settings
 
     utility = ManagementUtility(loop, argv)
     utility.execute()

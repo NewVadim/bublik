@@ -1,4 +1,4 @@
-from bublik.conf import AppSettings
+from site_settings import AppSettings
 
 
 class ChatSettings(AppSettings):

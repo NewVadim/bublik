@@ -1,4 +1,5 @@
 import logging
+import logging.config
 
 from aiohttp import web
 
@@ -8,6 +9,8 @@ from bublik.core.management import BaseCommand
 
 class Command(BaseCommand):
     def execute(self, loop, argv):
+        logging.config.dictConfig(settings.LOGGING)
+
         app = super(Command, self).execute(loop, argv)
 
         # if settings.DEBUG:
